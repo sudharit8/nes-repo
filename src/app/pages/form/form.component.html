@@ -1,0 +1,46 @@
+<nz-card>
+    <p>
+        <strong>
+            Detect a dirty form <br>
+            The first step in this challenge is to create a form. Then, build a form guard that will ask the user if they want to continue without saving if the form is dirty (i.e., the value of the form has changed). You’ll use @Injectable() and CanDeactivate to complete this challenge.
+        </strong><br><br>
+        <strong>
+            Note: Please fill some something in the form and try to change the route.
+        </strong>
+    </p>
+    <br>
+    <form [formGroup]="form">
+        <div class="form">
+            <div nz-col [nzSpan]="10">
+                <nz-form-item>
+                    <nz-form-label class="lable-style">Name</nz-form-label><br/>
+                    <nz-form-control nzErrorTip="">
+                        <input nz-input type="text" formControlName="nameControl"
+                            placeholder="" 
+                             />
+                    </nz-form-control>
+                </nz-form-item>
+            </div>
+        
+            <div nz-col [nzSpan]="24">
+                <nz-form-item>
+                    <nz-form-label class="lable-style">Notes</nz-form-label><br/>
+                    <nz-form-control
+                        nzErrorTip="">
+                        <textarea nz-input formControlName="notesControl"
+                            placeholder=""></textarea>
+                      
+                    </nz-form-control>
+                </nz-form-item>
+            </div>
+        
+            <div class="button-container">
+                <button nz-button type="primary" (click)="saveForm()">Save</button>
+              </div>
+        </div>
+        
+    </form>
+   
+</nz-card>
+
+  

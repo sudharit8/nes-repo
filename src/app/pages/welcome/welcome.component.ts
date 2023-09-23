@@ -8,13 +8,11 @@ import { Component, OnInit } from '@angular/core';
 export class WelcomeComponent implements OnInit {
 
   accordionItems = [
-    { title: 'Card', content: 'Content for card goes here', active: true },
-    { title: 'Credit Card', content: 'Content for Credit Card', active: false },
-    { title: 'Star Rating', content: 'Content for Star Rating', active: false },
+    { title: 'Credit Card', content: 'Content for Credit Card', active: true },
     { title: 'Array Sort', content: 'Content for Sorting', active: false },
+    { title: 'Star Rating', content: 'Content for Star Rating', active: false },
+    { title: 'Card', content: 'Content for card goes here', active: false },
     { title: 'Popup', content: 'Content for Popup', active: false },
-
-
   ];
   
   constructor() { }

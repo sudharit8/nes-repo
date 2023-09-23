@@ -6,13 +6,14 @@ import { WelcomeComponent } from './welcome.component';
 import { CardComponent } from '../card/card.component';
 import { AccordionComponent } from '../accordion/accordion.component';
 import { DemoNgZorroAntdModule } from 'src/app/ng-zorro-antd.module';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { CommonModule } from '@angular/common';
 import { CreditCardPipe } from 'src/app/shared/credit-card.pipe';
 import { StarRatingComponent } from '../star-rating/star-rating.component';
 import { SortPipe } from 'src/app/shared/sort.pipe';
 import { SortDemoComponent } from '../sort-demo/sort-demo.component';
 import { PopupComponent } from '../popup/popup.component';
+import { FormComponent } from '../form/form.component';
 
 
 @NgModule({
@@ -20,10 +21,12 @@ import { PopupComponent } from '../popup/popup.component';
     CommonModule,
     WelcomeRoutingModule,
     DemoNgZorroAntdModule,
-    FormsModule
+    FormsModule,
+    ReactiveFormsModule
   ],
   declarations: [
     WelcomeComponent,
+    FormComponent,
     PopupComponent,
     CreditCardPipe,
     StarRatingComponent,
@@ -42,8 +45,10 @@ import { PopupComponent } from '../popup/popup.component';
     CommonModule,
     AccordionComponent,
     PopupComponent,
+    FormComponent,
     SortDemoComponent,
-    SortPipe
+    SortPipe,
+    ReactiveFormsModule
   ]
 })
 export class WelcomeModule { }

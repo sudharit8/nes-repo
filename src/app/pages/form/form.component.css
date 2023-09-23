@@ -1,0 +1,11 @@
+.card-container {
+    margin: 20px;
+  }
+  
+  .button-container {
+    text-align: right;
+  }
+  .form {
+    display: flex;
+    flex-direction: column;
+  }

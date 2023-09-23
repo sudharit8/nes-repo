@@ -2,11 +2,13 @@ import { Component, Input, OnDestroy, OnInit } from '@angular/core';
 import { NzModalService } from 'ng-zorro-antd/modal';
 import { Subject, delay, of, takeUntil } from 'rxjs';
 import { PopupComponent } from '../popup/popup.component';
+import { fadeInOutAnimation } from 'src/app/shared/popup-animation/popup.animation';
 
 @Component({
   selector: 'app-accordion',
   templateUrl: './accordion.component.html',
-  styleUrls: ['./accordion.component.css']
+  styleUrls: ['./accordion.component.css'],
+  animations: [fadeInOutAnimation] // Apply the animation
 })
 export class AccordionComponent implements OnInit, OnDestroy {
 

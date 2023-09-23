@@ -30,7 +30,17 @@
                     challenge, you will use @Pipe() and PipeTransform.
                 </strong>
             </p>
-            <input type="text" [(ngModel)]="creditCardNumber" maxlength="16"><br><br>
+            <!-- <input nz-input type="text" [(ngModel)]="creditCardNumber" maxlength="16"><br><br> -->
+            <div nz-col [nzSpan]="10">
+                <nz-form-item>
+                    <!-- <nz-form-label class="lable-style"></nz-form-label><br/> -->
+                    <nz-form-control nzErrorTip="">
+                        <input nz-input type="text" maxlength="16" [(ngModel)]="creditCardNumber"
+                            placeholder="" 
+                             />
+                    </nz-form-control>
+                </nz-form-item>
+            </div>
             <p
                 [ngClass]="{'valid-credit-card': isValidCreditCard(creditCardNumber), 'invalid-credit-card': !isValidCreditCard(creditCardNumber)}">
                 {{ creditCardNumber | creditCard }}
