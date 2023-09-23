@@ -1,0 +1,18 @@
+<p>
+    <strong>
+        Build an accordion
+        components with one or more expandable sections, help save space in UI design. If you’re working on the front end of an application, you’ll use accordions a lot. For this challenge, your accordion will accept a list and render it. The content in your list will include a title, a body, and an icon to open and close the accordion. You’ll use ng-content, @Input(), ngFor, and dynamic class binding, and you’ll also implement a click handler.
+    </strong>
+</p>
+<nz-collapse>
+    <nz-collapse-panel *ngFor="let item of items" [nzHeader]="item.title" [nzActive]="item.active">
+        <ng-container *ngIf="item.title == 'Card'">
+            <app-card [title]="'Card Title'" [subtitle]="'Card Subtitle'" [icon]="'fa fa-star'">
+                <div class="card-body-content">
+                </div>
+                <div class="card-footer-content">
+                </div>
+            </app-card>
+        </ng-container>
+    </nz-collapse-panel>
+</nz-collapse>

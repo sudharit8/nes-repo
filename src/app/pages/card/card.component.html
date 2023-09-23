@@ -1,0 +1,23 @@
+<p>
+    <strong>
+        Build an Angular card component <br>
+        All sorts of apps use cards to display content that repeats. You often see them on mobile apps and websites. For
+        this challenge, build a card that accepts a title, subtitle, and icon. It should also accept a nested footer and
+        body content. You’ll need to use ng-content , @Input(), ngIf, and dynamic class binding to complete this
+        challenge.
+    </strong>
+</p>
+<br>
+<div class="card">
+    <div class="card-header">
+        <h2>{{ title }}</h2>
+        <p>{{ subtitle }}</p>
+        <i class="{{ icon }}"></i>
+    </div>
+    <div class="card-body">
+        <ng-content select=".card-body-content"></ng-content>
+    </div>
+    <div class="card-footer">
+        <ng-content select=".card-footer-content"></ng-content>
+    </div>
+</div>
