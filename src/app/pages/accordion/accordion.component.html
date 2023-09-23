@@ -1,7 +1,10 @@
 <p>
     <strong>
         Build an accordion
-        components with one or more expandable sections, help save space in UI design. If you’re working on the front end of an application, you’ll use accordions a lot. For this challenge, your accordion will accept a list and render it. The content in your list will include a title, a body, and an icon to open and close the accordion. You’ll use ng-content, @Input(), ngFor, and dynamic class binding, and you’ll also implement a click handler.
+        components with one or more expandable sections, help save space in UI design. If you’re working on the front
+        end of an application, you’ll use accordions a lot. For this challenge, your accordion will accept a list and
+        render it. The content in your list will include a title, a body, and an icon to open and close the accordion.
+        You’ll use ng-content, @Input(), ngFor, and dynamic class binding, and you’ll also implement a click handler.
     </strong>
 </p>
 <nz-collapse>
@@ -19,11 +22,17 @@
             <p>
                 <strong>
                     Build a credit card formatter <br>
-                    If you’re working with large numbers, like credit cards that have 16 digits, it’s easier for people to read them when they’re formatted. So for this challenge, try creating a pipe in Angular that will take a credit card number as a string and return the number with dashes between each set of characters. Only consider 16-digit numbers as valid and place the dash between every four digits. Your code should return an error if a number was entered that doesn’t have 16 characters. For this challenge, you will use @Pipe() and PipeTransform.
-                </strong>    
-            </p>    
+                    If you’re working with large numbers, like credit cards that have 16 digits, it’s easier for people
+                    to read them when they’re formatted. So for this challenge, try creating a pipe in Angular that will
+                    take a credit card number as a string and return the number with dashes between each set of
+                    characters. Only consider 16-digit numbers as valid and place the dash between every four digits.
+                    Your code should return an error if a number was entered that doesn’t have 16 characters. For this
+                    challenge, you will use @Pipe() and PipeTransform.
+                </strong>
+            </p>
             <input type="text" [(ngModel)]="creditCardNumber" maxlength="16"><br><br>
-            <p [ngClass]="{'valid-credit-card': isValidCreditCard(creditCardNumber), 'invalid-credit-card': !isValidCreditCard(creditCardNumber)}">
+            <p
+                [ngClass]="{'valid-credit-card': isValidCreditCard(creditCardNumber), 'invalid-credit-card': !isValidCreditCard(creditCardNumber)}">
                 {{ creditCardNumber | creditCard }}
             </p>
         </ng-container>
@@ -34,6 +43,17 @@
 
         <ng-container *ngIf="item.title == 'Array Sort'">
             <app-sort-demo></app-sort-demo>
+        </ng-container>
+
+
+        <ng-container *ngIf="item.title == 'Popup'">
+            <p>
+                <strong>
+                    Create a pop-up <br>
+                    Create a basic pop-up in Angular that is displayed by a click on another element, like a button. In this challenge, you’ll be using @Component(), @Input(), ng-content, fadeInOutAnimation, ngIf, (click), of(), delay(), pipe(), and unsubscribe().
+                </strong>
+            </p>
+            <button nz-button (click)="showPopup()">Show Popup</button>
         </ng-container>
     </nz-collapse-panel>
 </nz-collapse>

@@ -11,7 +11,10 @@ export class WelcomeComponent implements OnInit {
     { title: 'Card', content: 'Content for card goes here', active: true },
     { title: 'Credit Card', content: 'Content for Credit Card', active: false },
     { title: 'Star Rating', content: 'Content for Star Rating', active: false },
-    { title: 'Array Sort', content: 'Content for Sorting', active: false }
+    { title: 'Array Sort', content: 'Content for Sorting', active: false },
+    { title: 'Popup', content: 'Content for Popup', active: false },
+
+
   ];
   
   constructor() { }

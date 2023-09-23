@@ -12,6 +12,7 @@ import { CreditCardPipe } from 'src/app/shared/credit-card.pipe';
 import { StarRatingComponent } from '../star-rating/star-rating.component';
 import { SortPipe } from 'src/app/shared/sort.pipe';
 import { SortDemoComponent } from '../sort-demo/sort-demo.component';
+import { PopupComponent } from '../popup/popup.component';
 
 
 @NgModule({
@@ -23,6 +24,7 @@ import { SortDemoComponent } from '../sort-demo/sort-demo.component';
   ],
   declarations: [
     WelcomeComponent,
+    PopupComponent,
     CreditCardPipe,
     StarRatingComponent,
     SortPipe,
@@ -39,6 +41,7 @@ import { SortDemoComponent } from '../sort-demo/sort-demo.component';
     FormsModule,
     CommonModule,
     AccordionComponent,
+    PopupComponent,
     SortDemoComponent,
     SortPipe
   ]
