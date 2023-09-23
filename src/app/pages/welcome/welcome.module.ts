@@ -10,6 +10,8 @@ import { FormsModule } from '@angular/forms';
 import { CommonModule } from '@angular/common';
 import { CreditCardPipe } from 'src/app/shared/credit-card.pipe';
 import { StarRatingComponent } from '../star-rating/star-rating.component';
+import { SortPipe } from 'src/app/shared/sort.pipe';
+import { SortDemoComponent } from '../sort-demo/sort-demo.component';
 
 
 @NgModule({
@@ -23,7 +25,9 @@ import { StarRatingComponent } from '../star-rating/star-rating.component';
     WelcomeComponent,
     CreditCardPipe,
     StarRatingComponent,
+    SortPipe,
     CardComponent,
+    SortDemoComponent,
     AccordionComponent
   ],
   schemas: [CUSTOM_ELEMENTS_SCHEMA,NO_ERRORS_SCHEMA],
@@ -34,7 +38,9 @@ import { StarRatingComponent } from '../star-rating/star-rating.component';
     DemoNgZorroAntdModule,
     FormsModule,
     CommonModule,
-    AccordionComponent
+    AccordionComponent,
+    SortDemoComponent,
+    SortPipe
   ]
 })
 export class WelcomeModule { }

@@ -31,5 +31,9 @@
         <ng-container *ngIf="item.title == 'Star Rating'">
             <app-star-rating [rating]="4.5"></app-star-rating>
         </ng-container>
+
+        <ng-container *ngIf="item.title == 'Array Sort'">
+            <app-sort-demo></app-sort-demo>
+        </ng-container>
     </nz-collapse-panel>
 </nz-collapse>

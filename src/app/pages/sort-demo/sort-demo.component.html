@@ -1,0 +1,18 @@
+<p>
+    <strong>
+        Create an Angular pipe that sorts <br>
+        Create a pipe that accepts an array of strings and a sort direction value of either asc or desc. If there isn’t
+        a sort direction value, simply return the original list, and if the value to sort isn’t an array, throw an
+        error. For this challenge, you’ll use @Pipe() and PipeTransform.
+    </strong>
+</p>
+
+<div class="button-group">
+    <button nz-button [nzType]="sortDirection === 'asc' ? 'primary' : null" (click)="sortDirection = 'asc'">ASC</button>
+    <button nz-button [nzType]="sortDirection === 'desc' ? 'primary' : null"
+        (click)="sortDirection = 'desc'">DESC</button>
+    <button nz-button [nzType]="sortDirection === 'none' ? 'primary' : null"
+        (click)="sortDirection = 'none'">NONE</button>
+</div>
+
+<div *ngFor="let item of items | sort:sortDirection" class="item">{{ item }}</div>
