@@ -8,6 +8,7 @@ import { AccordionComponent } from '../accordion/accordion.component';
 import { DemoNgZorroAntdModule } from 'src/app/ng-zorro-antd.module';
 import { FormsModule } from '@angular/forms';
 import { CommonModule } from '@angular/common';
+import { CreditCardPipe } from 'src/app/shared/credit-card.pipe';
 
 
 @NgModule({
@@ -19,15 +20,18 @@ import { CommonModule } from '@angular/common';
   ],
   declarations: [
     WelcomeComponent,
+    CreditCardPipe,
     CardComponent,
     AccordionComponent
   ],
   schemas: [CUSTOM_ELEMENTS_SCHEMA,NO_ERRORS_SCHEMA],
   exports: [
     WelcomeComponent,
+    CreditCardPipe,
     DemoNgZorroAntdModule,
     FormsModule,
-    CommonModule
+    CommonModule,
+    AccordionComponent
   ]
 })
 export class WelcomeModule { }
