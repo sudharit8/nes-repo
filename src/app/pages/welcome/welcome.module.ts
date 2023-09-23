@@ -9,6 +9,7 @@ import { DemoNgZorroAntdModule } from 'src/app/ng-zorro-antd.module';
 import { FormsModule } from '@angular/forms';
 import { CommonModule } from '@angular/common';
 import { CreditCardPipe } from 'src/app/shared/credit-card.pipe';
+import { StarRatingComponent } from '../star-rating/star-rating.component';
 
 
 @NgModule({
@@ -21,12 +22,14 @@ import { CreditCardPipe } from 'src/app/shared/credit-card.pipe';
   declarations: [
     WelcomeComponent,
     CreditCardPipe,
+    StarRatingComponent,
     CardComponent,
     AccordionComponent
   ],
   schemas: [CUSTOM_ELEMENTS_SCHEMA,NO_ERRORS_SCHEMA],
   exports: [
     WelcomeComponent,
+    StarRatingComponent,
     CreditCardPipe,
     DemoNgZorroAntdModule,
     FormsModule,

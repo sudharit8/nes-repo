@@ -16,10 +16,20 @@
         </ng-container>
 
         <ng-container *ngIf="item.title == 'Credit Card'">
+            <p>
+                <strong>
+                    Build a credit card formatter <br>
+                    If you’re working with large numbers, like credit cards that have 16 digits, it’s easier for people to read them when they’re formatted. So for this challenge, try creating a pipe in Angular that will take a credit card number as a string and return the number with dashes between each set of characters. Only consider 16-digit numbers as valid and place the dash between every four digits. Your code should return an error if a number was entered that doesn’t have 16 characters. For this challenge, you will use @Pipe() and PipeTransform.
+                </strong>    
+            </p>    
             <input type="text" [(ngModel)]="creditCardNumber" maxlength="16"><br><br>
             <p [ngClass]="{'valid-credit-card': isValidCreditCard(creditCardNumber), 'invalid-credit-card': !isValidCreditCard(creditCardNumber)}">
                 {{ creditCardNumber | creditCard }}
             </p>
+        </ng-container>
+
+        <ng-container *ngIf="item.title == 'Star Rating'">
+            <app-star-rating [rating]="4.5"></app-star-rating>
         </ng-container>
     </nz-collapse-panel>
 </nz-collapse>

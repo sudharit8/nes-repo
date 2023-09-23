@@ -1,0 +1,14 @@
+<p>
+    <strong>
+        Build a star rating component <br>
+        In this challenge, you’ll build a star rating component that accepts a value of 0-5, including half values like 4.5. The component should render the correct amount of stars, including empty stars and half stars. You’ll use @Component(), @Input(), ngFor, and ngIf.
+    </strong>
+</p>    
+
+<div class="star-rating">
+    <ng-container *ngFor="let _ of getFullStarsArray(); let i = index">
+        <span class="star" [class.selected]="i < rating" (click)="setRating(i + 1)">&#9733;</span>
+    </ng-container>
+</div>
+
+<div class="label">Current Rating: {{ rating }}</div>

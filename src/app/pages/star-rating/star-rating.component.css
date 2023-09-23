@@ -1,0 +1,20 @@
+.star-rating {
+    font-size: 24px;
+  }
+  
+  .star {
+    display: inline-block;
+    width: 1em;
+    color: #ccc; /* Grey color for unselected stars */
+    cursor: pointer; /* Add pointer cursor on hover */
+  }
+  
+  .star.selected {
+    color: #ffd700; /* Gold color for selected stars */
+  }
+  
+  .label {
+    font-size: 18px;
+    margin-top: 10px;
+  }
+  
