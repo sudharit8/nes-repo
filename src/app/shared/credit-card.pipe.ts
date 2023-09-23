@@ -10,7 +10,7 @@ export class CreditCardPipe implements PipeTransform {
       // Format the string with dashes every four digits
       return value.match(/.{1,4}/g)!.join('-'); // Use non-null assertion operator (!) here
     } else {
-      throw new Error('Invalid credit card number. Please enter a 16-digit number.');
+      return 'Invalid credit card number. Please enter a 16-digit number.';
     }
   }
 }

@@ -15,4 +15,8 @@ export class AccordionComponent implements OnInit {
     
   }
 
+  isValidCreditCard(creditCardNumber: string): boolean {
+    return /^\d{16}$/.test(creditCardNumber);
+  }
+
 }

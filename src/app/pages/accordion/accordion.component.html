@@ -16,8 +16,10 @@
         </ng-container>
 
         <ng-container *ngIf="item.title == 'Credit Card'">
-            <input type="text" [(ngModel)]="creditCardNumber" maxlength="16">
-            <p>{{ creditCardNumber | creditCard }}</p>
+            <input type="text" [(ngModel)]="creditCardNumber" maxlength="16"><br><br>
+            <p [ngClass]="{'valid-credit-card': isValidCreditCard(creditCardNumber), 'invalid-credit-card': !isValidCreditCard(creditCardNumber)}">
+                {{ creditCardNumber | creditCard }}
+            </p>
         </ng-container>
     </nz-collapse-panel>
 </nz-collapse>
